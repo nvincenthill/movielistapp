@@ -4,8 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run-script compile & npm run-script bundle & npm run-script server",
+    "compile": "babel . --out-dir compiled --presets=env,react --ignore=node_modules,compiled --source-maps inline --watch",
+    "server": "node_modules/.bin/webpack-dev-server",
+    "bundle": "webpack"
   },
   "author": "Nicholas Vincent-Hill",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.4"
+  }
 }
