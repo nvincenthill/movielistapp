@@ -1,5 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run-script', 'compile' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'compile' ]
 2 info using npm@3.5.2
 3 info using node@v8.10.0
 4 verbose run-script [ 'precompile', 'compile', 'postcompile' ]
@@ -26,7 +26,7 @@
 15 verbose pkgid movielistapp@1.0.0
 16 verbose cwd /home/nick/Projects/hackreactor/assessments/self-study-movie-list
 17 error Linux 4.15.0-23-generic
-18 error argv "/usr/bin/node" "/usr/bin/npm" "run-script" "compile"
+18 error argv "/usr/bin/node" "/usr/bin/npm" "run" "compile"
 19 error node v8.10.0
 20 error npm  v3.5.2
 21 error code ELIFECYCLE

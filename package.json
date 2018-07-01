@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run-script compile & npm run-script bundle & npm run-script server",
+    "start": "npm run compile & npm run bundle & npm run server",
     "compile": "babel . --out-dir compiled --presets=env,react --ignore=node_modules,compiled --source-maps inline --watch",
-    "server": "node_modules/.bin/webpack-dev-server",
+    "server": "node_modules/.bin/webpack-dev-server --inline",
     "bundle": "webpack"
   },
   "author": "Nicholas Vincent-Hill",
@@ -17,10 +17,16 @@
     "babel-preset-react-app": "^3.1.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "style-loader": "^0.21.0",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
     "webpack-dev-server": "^3.1.4"
   }
 }
