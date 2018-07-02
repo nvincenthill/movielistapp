@@ -81,20 +81,56 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app.js":
-/*!****************!*\
-  !*** ./app.js ***!
-  \****************/
+/***/ "./components/MovieList.js":
+/*!*********************************!*\
+  !*** ./components/MovieList.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _MovieListItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MovieListItem */ \"./components/MovieListItem.js\");\n\n\n\nclass MovieList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor(props) {\n    super(props);\n  }\n\n  render() {\n    let items = this.props.movies.map((movie, index) => {\n      return movie = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MovieListItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { key: movie.title, movie: this.props.movies[index] });\n    });\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n      \"ul\",\n      { className: \"movie-list\" },\n      items\n    );\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MovieList);\n\n//# sourceURL=webpack:///./components/MovieList.js?");
+
+/***/ }),
+
+/***/ "./components/MovieListItem.js":
+/*!*************************************!*\
+  !*** ./components/MovieListItem.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass MovieListItem extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor(props) {\n    super(props);\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n      \"li\",\n      { className: \"movie-list-item\" },\n      this.props.movie.title\n    );\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MovieListItem);\n\n//# sourceURL=webpack:///./components/MovieListItem.js?");
+
+/***/ }),
+
+/***/ "./components/Search.js":
+/*!******************************!*\
+  !*** ./components/Search.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n  constructor(props) {\n    super(props);\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n      \"div\",\n      null,\n      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"input\", { placeholder: \"Find a movie\", onChange: this.props.handleInput }),\n      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n        \"button\",\n        { onClick: this.props.search },\n        \"Search\"\n      )\n    );\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Search);\n\n//# sourceURL=webpack:///./components/Search.js?");
+
+/***/ }),
+
+/***/ "./components/app.js":
+/*!***************************!*\
+  !*** ./components/app.js ***!
+  \***************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./main.css\");\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      name: \"Nick\"\n    };\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\n      \"h1\",\n      null,\n      \"Fuck you, \",\n      this.state.name\n    );\n  }\n}\n\nreact_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(App, null), document.getElementById(\"app\"));\n\n//# sourceURL=webpack:///./app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main.css */ \"./main.css\");\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _MovieList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MovieList */ \"./components/MovieList.js\");\n/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Search */ \"./components/Search.js\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! fs */ \"./node_modules/node-libs-browser/mock/empty.js\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      movies: [{ title: \"Mean Girls\" }, { title: \"Hackers\" }, { title: \"The Grey\" }, { title: \"Sunshine\" }, { title: \"Ex Machina\" }],\n      oldMovies: [{ title: \"Mean Girls\" }, { title: \"Hackers\" }, { title: \"The Grey\" }, { title: \"Sunshine\" }, { title: \"Ex Machina\" }],\n      input: \"\"\n    };\n\n    this.handleInput = this.handleInput.bind(this);\n    this.search = this.search.bind(this);\n  }\n\n  handleInput(event) {\n    console.log(event);\n    this.setState({ input: event.target.value });\n  }\n\n  search() {\n    let filtered = this.state.oldMovies.map(movie => {\n      if (movie.title.toLowerCase().includes(this.state.input.toLowerCase())) {\n        return movie;\n      }\n    });\n    console.log(filtered);\n    let cleaned = [];\n    filtered.forEach(movie => {\n      if (movie != undefined) {\n        cleaned.push(movie);\n      }\n    });\n    this.setState({ movies: cleaned });\n  }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\n      \"div\",\n      null,\n      react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(\n        \"h1\",\n        null,\n        \"Movie List\"\n      ),\n      react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_4__[\"default\"], { handleInput: this.handleInput, search: this.search }),\n      react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_MovieList__WEBPACK_IMPORTED_MODULE_3__[\"default\"], { movies: this.state.movies })\n    );\n  }\n}\n\nreact_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(App, null), document.getElementById(\"app\"));\n\n//# sourceURL=webpack:///./components/app.js?");
 
 /***/ }),
 
@@ -116,7 +152,7 @@ eval("\nvar content = __webpack_require__(/*! !./node_modules/css-loader!./main.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"h1 {\\n  color: #eee;\\n}\\n\\nbody {\\n  background: grey;\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./main.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"body {\\n  color: #eee;\\n  text-align: center;\\n}\\n\\nbody {\\n  background: #222;\\n}\\n\\nul {\\n  list-style-type: none;\\n}\\n\\nli {\\n  margin: 2rem 2rem;\\n  padding: 1rem 1rem;\\n  background: #eee;\\n  color: #222;\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./main.css?./node_modules/css-loader");
 
 /***/ }),
 
@@ -299,6 +335,17 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
+/***/ "./node_modules/node-libs-browser/mock/empty.js":
+/*!******************************************************!*\
+  !*** ./node_modules/node-libs-browser/mock/empty.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./node_modules/node-libs-browser/mock/empty.js?");
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -402,6 +449,17 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
 /***/ (function(module, exports) {
 
 eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element with a data-uri to\n * embed the css on the page. This breaks all relative urls because now they are relative to a\n * bundle instead of the current page.\n *\n * One solution is to only use full urls, but that may be impossible.\n *\n * Instead, this function \"fixes\" the relative urls to be absolute according to the current page location.\n *\n * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.\n *\n */\n\nmodule.exports = function (css) {\n  // get current location\n  var location = typeof window !== \"undefined\" && window.location;\n\n  if (!location) {\n    throw new Error(\"fixUrls requires window.location\");\n  }\n\n\t// blank or null?\n\tif (!css || typeof css !== \"string\") {\n\t  return css;\n  }\n\n  var baseUrl = location.protocol + \"//\" + location.host;\n  var currentDir = baseUrl + location.pathname.replace(/\\/[^\\/]*$/, \"/\");\n\n\t// convert each url(...)\n\t/*\n\tThis regular expression is just a way to recursively match brackets within\n\ta string.\n\n\t /url\\s*\\(  = Match on the word \"url\" with any whitespace after it and then a parens\n\t   (  = Start a capturing group\n\t     (?:  = Start a non-capturing group\n\t         [^)(]  = Match anything that isn't a parentheses\n\t         |  = OR\n\t         \\(  = Match a start parentheses\n\t             (?:  = Start another non-capturing groups\n\t                 [^)(]+  = Match anything that isn't a parentheses\n\t                 |  = OR\n\t                 \\(  = Match a start parentheses\n\t                     [^)(]*  = Match anything that isn't a parentheses\n\t                 \\)  = Match a end parentheses\n\t             )  = End Group\n              *\\) = Match anything and then a close parens\n          )  = Close non-capturing group\n          *  = Match anything\n       )  = Close capturing group\n\t \\)  = Match a close parens\n\n\t /gi  = Get all matches, not the first.  Be case insensitive.\n\t */\n\tvar fixedCss = css.replace(/url\\s*\\(((?:[^)(]|\\((?:[^)(]+|\\([^)(]*\\))*\\))*)\\)/gi, function(fullMatch, origUrl) {\n\t\t// strip quotes (if they exist)\n\t\tvar unquotedOrigUrl = origUrl\n\t\t\t.trim()\n\t\t\t.replace(/^\"(.*)\"$/, function(o, $1){ return $1; })\n\t\t\t.replace(/^'(.*)'$/, function(o, $1){ return $1; });\n\n\t\t// already a full url? no change\n\t\tif (/^(#|data:|http:\\/\\/|https:\\/\\/|file:\\/\\/\\/|\\s*$)/i.test(unquotedOrigUrl)) {\n\t\t  return fullMatch;\n\t\t}\n\n\t\t// convert the url to a full url\n\t\tvar newUrl;\n\n\t\tif (unquotedOrigUrl.indexOf(\"//\") === 0) {\n\t\t  \t//TODO: should we add protocol?\n\t\t\tnewUrl = unquotedOrigUrl;\n\t\t} else if (unquotedOrigUrl.indexOf(\"/\") === 0) {\n\t\t\t// path should be relative to the base url\n\t\t\tnewUrl = baseUrl + unquotedOrigUrl; // already starts with '/'\n\t\t} else {\n\t\t\t// path should be relative to current directory\n\t\t\tnewUrl = currentDir + unquotedOrigUrl.replace(/^\\.\\//, \"\"); // Strip leading './'\n\t\t}\n\n\t\t// send back the fixed url(...)\n\t\treturn \"url(\" + JSON.stringify(newUrl) + \")\";\n\t});\n\n\t// send back the fixed css\n\treturn fixedCss;\n};\n\n\n//# sourceURL=webpack:///./node_modules/style-loader/lib/urls.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!****************************************************************************************************************!*\
+  !*** multi ./components/app.js ./components/MovieList.js ./components/MovieListItem.js ./components/Search.js ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ./components/app.js */\"./components/app.js\");\n__webpack_require__(/*! ./components/MovieList.js */\"./components/MovieList.js\");\n__webpack_require__(/*! ./components/MovieListItem.js */\"./components/MovieListItem.js\");\nmodule.exports = __webpack_require__(/*! ./components/Search.js */\"./components/Search.js\");\n\n\n//# sourceURL=webpack:///multi_./components/app.js_./components/MovieList.js_./components/MovieListItem.js_./components/Search.js?");
 
 /***/ })
 

@@ -2,10 +2,21 @@ var webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "./app.js",
+  entry: {
+    // add multiple files dynamically
+    app: [
+      "./components/app.js",
+      "./components/MovieList.js",
+      "./components/MovieListItem.js",
+      "./components/Search.js"
+    ],
+    vendors: ["react"]
+  },
   output: {
-    // path: path.resolve(__dirname, "dist"),
-    filename: "app.bundle.js"
+    // Make sure to use [name] or [id] in output.filename
+    //  when using multiple entry points
+    filename: "[name].bundle.js",
+    chunkFilename: "[id].bundle.js"
   },
   module: {
     rules: [
@@ -19,6 +30,9 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       }
     ]
+  },
+  node: {
+    fs: "empty"
   },
   watch: true
 };
