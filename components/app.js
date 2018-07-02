@@ -3,7 +3,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import MovieList from "./MovieList";
 import Search from "./Search";
-import { unwatchFile } from "fs";
 
 class App extends React.Component {
   constructor(props) {

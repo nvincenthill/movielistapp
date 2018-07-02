@@ -12,7 +12,12 @@ class MovieList extends React.Component {
         <MovieListItem key={movie.title} movie={this.props.movies[index]} />
       ));
     });
-    return <ul className="movie-list">{items}</ul>;
+    return (
+      <div>
+        <ul className="movie-list">{items}</ul>
+        {this.props.movies.length === 0 ? <p> No movies found </p> : null}
+      </div>
+    );
   }
 }
 
